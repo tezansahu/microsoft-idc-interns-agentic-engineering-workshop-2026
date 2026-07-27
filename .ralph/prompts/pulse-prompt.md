@@ -1,6 +1,16 @@
+# PROJECT CONTEXT
+
+All design decisions, requirements, and architecture for this project are documented in:
+
+- **Spec:** `docs/spec.md` — full product requirements
+- **Context:** `CONTEXT.md` — background and scope
+- **ADRs:** `docs/adr/` — architecture decision records
+
+Read these before picking a task; they contain critical context that GitHub issue descriptions alone do not capture.
+
 # ISSUES
 
-Local issue files from `issues/` are provided at start of context. Parse them to understand the open issues.
+Local issue files are available from `.scratch/<feature-slug>/issues/`. Parse them to understand the open issues.
 
 You will work on the AFK issues only (label `afk`), not the HITL ones (label `hitl`).
 
@@ -42,11 +52,11 @@ git pull
 
 **If there are uncommitted changes:** Stop immediately. Inform the user about the uncommitted changes and ask them to resolve it (commit, stash, or discard) before re-running.
 
-**If the working tree is clean:** Continue with implementation on the current branch.
+**If the working tree is clean:** Continue with implementation on the currently checked-out branch. Development happens on this branch — do not switch branches or target main.
 
 # IMPLEMENTATION
 
-Use /tdd to complete the task.
+Use /implement to complete the task.
 
 Apply TDD to **both** the Python backend and the React frontend.
 
@@ -76,6 +86,8 @@ Before committing, run all feedback loops:
 - `cd frontend && npm test -- --run` to run Vitest tests (non-watch mode)
 - `cd frontend && npx tsc --noEmit` to type-check TypeScript
 
+- Run `/code-review` as a final safety gate before committing
+
 # COMMIT
 
 Make a git commit. The commit message must:
@@ -86,7 +98,7 @@ Make a git commit. The commit message must:
 
 # FINISHING UP
 
-If the task is complete, move the issue file to `issues/done/`.
+If the task is complete, move the issue file to `.scratch/<feature-slug>/issues/done/`.
 
 If the task is not complete, add a note to the issue file with what was done.
 
