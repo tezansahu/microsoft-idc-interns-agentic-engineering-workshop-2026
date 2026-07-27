@@ -14,7 +14,7 @@ This skill takes the current conversation context and codebase understanding and
 
 Check with the user that these seams match their expectations.
 
-3. Write the spec using the template below, then add it into the `internal-docs/<project-name>` directory.
+3. Write the spec using the template below, then add it into the `docs/` directory.
 
 <spec-template>
 
